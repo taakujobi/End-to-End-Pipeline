@@ -1,0 +1,19 @@
+name: End to end pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:   #enables us to manually trigger the workflows
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secret.PERSONAL_ACCESS_TOKEN }}  #grants access to eks cluster
+          fetch-depth: 0  #Downloads all the codes in it
