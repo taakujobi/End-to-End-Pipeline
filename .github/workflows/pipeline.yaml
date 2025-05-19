@@ -15,5 +15,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          token: ${{ secret.PERSONAL_ACCESS_TOKEN }}  #grants access to eks cluster
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}  #grants access to eks cluster
           fetch-depth: 0  #Downloads all the codes in it
