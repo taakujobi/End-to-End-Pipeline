@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0  #Downloads all the codes in it
 
       - name: Setup Node.js
-        uses: action/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 20.x
           cache: 'npm'
