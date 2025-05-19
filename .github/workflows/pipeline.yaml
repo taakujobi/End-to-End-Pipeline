@@ -26,3 +26,12 @@ jobs:
 
       - name: Install node dependencies
         run: npm install
+
+      - name: Build Docker Image
+        run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/planning-app:${{ github.sha }} .
+
+      - name: Login to Dockerhub
+        run: echo *${{ secrets.DOCKER_HUB_TOKEN }}* | docker login -u *${{ secrets.DOCKER_HUB_USERNAME }}* --password-stdin
+
+      - name: Push Docker Image to DockerHub
+        run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/planning-app:${{ github.sha }}
