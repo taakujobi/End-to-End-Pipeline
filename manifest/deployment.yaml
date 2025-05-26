@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: planning-app
-          image: taakujobi/planning-app:0aca99f70123ef356d29a376b04ea561eed53562
+          image: taakujobi/planning-app:f776f3040f7ffe831cf944820b283c364c21f8aa
           ports:
             - containerPort: 80
