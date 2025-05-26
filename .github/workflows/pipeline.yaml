@@ -58,7 +58,7 @@ jobs:
           chmod +x argocd
           sudo mv argocd /usr/local/bin/argocd
 
-        name: Login to Argocd
+      - name: Login to Argocd
         run: |
           argocd login ${{ secrets.ARGOCD_SERVER }} \
             --username ${{ secrets.ARGOCD_USERNAME }} \
