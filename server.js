@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-let userGoal = 'Learn and test Pipeline - resumed practice200!';
+let userGoal = 'Learn and test Pipeline - resumed practice300!';
 
 app.use(
   bodyParser.urlencoded({
@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   res.send(`
     <html>
       <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
       </head>
       <body>
         <section>
