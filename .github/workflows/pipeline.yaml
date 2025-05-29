@@ -89,3 +89,6 @@ jobs:
           git add .
           git commit -m "Update image to planning-app:${{ github.sha }}"
           git push origin main
+
+      - name: sync argocd
+        run: argocd app sync planning app
